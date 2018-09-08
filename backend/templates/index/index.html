@@ -2,6 +2,7 @@
 
 <head>
   <title>아메카지 브랜드 MOAA(모아) 공식몰 입니다</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 </head>
@@ -22,9 +23,9 @@ header {
   position: fixed;
   height: 100px;
   padding-top: 40px;
-  padding-left: 53px;
-  padding-right: 53px;
-  width: 90%;
+  top:0;
+  left:0;
+  width: 100%;
   background: rgba(255, 255, 255, 0.9);
 }
 
@@ -46,6 +47,7 @@ nav {
   display: flex;
   flex:1;
   justify-content: flex-start;
+  padding-left: 50px;
 }
 
 .nav-center-menu-container {
@@ -58,6 +60,7 @@ nav {
   display: flex;
   flex:1;
   justify-content: flex-end;
+  padding-right: 50px;
 }
 
 .nav-left-menu-item {
@@ -68,6 +71,8 @@ nav {
 .nav-center-menu-item {
   padding-left: 15px;
   padding-right: 15px;
+  font-size: 90%;
+  padding-top: 6px;
 }
 
 .nav-right-menu-item {
@@ -82,10 +87,135 @@ nav {
 .section-main-banner {
   width: 100%;
 }
+
+.header-hamberger {
+  display: none;
+  font-size: 160%;
+  margin-left: 30px;
+}
+
+.header-hamberger-icon {
+  cursor: pointer;
+}
+
+.dim-dark {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+aside {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  transition: 0.5s;
+  box-shadow: rgba(0, 0, 0, 0.14) 0px 8px 10px 0px, rgba(0, 0, 0, 0.15) 0px 4px 4px 0px;
+}
+
+.aside-container {
+  padding-top: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.aside-logo-img {
+  width: 100px;
+  height: 15px;
+  margin-bottom: 15px;
+}
+
+.aside-search-box {
+  border: solid 1px black;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+
+.aside-search-input {
+  border: none;
+  width: 80%;
+  padding: 3px;
+}
+
+.aside-menu-item {
+  color: #444444;
+  margin-bottom: 30px;
+}
+
+.aside-menu-icon {
+  margin-right: 15px;
+  font-size: 130%;
+  color: #111111;
+  margin-left: 10px;
+}
+
+@media only screen and (max-width: 870px) {
+  .nav-left-menu-container {
+    display: none;
+  }
+  .nav-center-menu-container {
+    display: none;
+  }
+  .nav-right-menu-container {
+    display: none;
+  }
+  header {
+    padding-top: 25px;
+    height: 46px;
+  }
+  .header-section-between {
+    padding-top: 70px;
+  }
+  .header-logo-container {
+    margin-top: -24px;
+  }
+  .header-hamberger {
+    display: block;
+  }
+}
 </style>
 
 <body>
   <header>
+
+    <div class='dim-dark' onclick="handleClickDim()"></div>
+
+    <aside>
+      <div class='aside-container'>
+        <img class='aside-logo-img' src='/static/index/main-logo.png'></img>
+
+        <div class='aside-search-box'>
+          <i class="fas fa-search"></i>
+          <input class='aside-search-input' type='text'></input>
+        </div>
+
+        <div class='aside-menu-item'>ABOUT</div>
+        <div class='aside-menu-item'>SHOP</div>
+        <div class='aside-menu-item'>LOOKBOOK</div>
+        <div class='aside-menu-item'>PEOPLE</div>
+        <div class='aside-menu-item'>COLLABO</div>
+        <div class='aside-menu-item'>COMMUNITY</div>
+        <div>
+          <i class="fab fa-facebook-f aside-menu-icon"></i>
+          <i class="fab fa-instagram aside-menu-icon"></i>
+          <i class="fab fa-blogger-b aside-menu-icon"></i>
+        </div>
+      </div>
+    </aside>
+
+    <div class='header-hamberger'>
+      <i class="fas fa-bars header-hamberger-icon" onclick="handleClickHamberger()"></i>
+    </div>
+
     <div class='header-logo-container'>
       <img class='header-logo-img' src='/static/index/main-logo.png'></img>
     </div>
@@ -144,6 +274,23 @@ nav {
     <h3>A collection of textile samples lay spread out on the table.</h3>
     <h3>A collection of textile samples lay spread out on the table.</h3>
   </section>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  $( document ).ready(function() {
+    console.log( "ready!" );
+  });
+
+  function handleClickHamberger(){
+    $("aside").css("width", "90%");
+    $(".dim-dark").css("display", "block");
+  }
+
+  function handleClickDim(){
+    $("aside").css("width", "0%");
+    $(".dim-dark").css("display", "none");
+  }
+  </script>
 </body>
 
 </html>
