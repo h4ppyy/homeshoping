@@ -158,6 +158,79 @@ aside {
   margin-left: 10px;
 }
 
+.section-between {
+  margin-top: 40px;
+}
+
+.section-002 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.section-002-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  display: flex;
+}
+
+.section-002-picture-001 {
+  flex: 2;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.section-002-picture-002 {
+  padding-bottom: 5px;
+}
+
+.section-002-picture-003 {
+}
+
+.section-002-picture-merge{
+  flex: 1;
+}
+
+.section-002-picture-001-item {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 10px 0px
+}
+
+.section-002-picture-002-item {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.section-002-picture-003-item {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.section-002-picture-001-item:hover{
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 10px 0px
+}
+
+.section-002-picture-002-item:hover{
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px 0px
+}
+
+.section-002-picture-003-item:hover{
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px 0px
+}
+
+.section-003 {
+  border: solid 1px red;
+}
+
+.section-004 {
+  border: solid 1px green;
+}
+
 @media only screen and (max-width: 870px) {
   .nav-left-menu-container {
     display: none;
@@ -180,6 +253,29 @@ aside {
   }
   .header-hamberger {
     display: block;
+  }
+  .section-002-container {
+    display: unset;
+  }
+  .section-002-picture-001 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  .section-002-picture-002 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  .section-002-picture-003 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+  .section-002-picture-001-item {
+    box-shadow: none;
   }
 }
 </style>
@@ -247,32 +343,34 @@ aside {
 
   <div class='header-section-between'></div>
 
-  <section>
+  <section class='section-001'>
     <img class='section-main-banner'src='/static/index/main-banner.jpg'></img>
   </section>
 
-  <section>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
+  <div class='section-between'></div>
+
+  <section class='section-002'>
+    <div class='section-002-container'>
+      <div class='section-002-picture-001'>
+        <img class='section-002-picture-001-item' src='/static/index/section2-001.jpg'></img>
+      </div>
+      <div class='section-002-picture-merge'>
+        <div class='section-002-picture-002'>
+          <img class='section-002-picture-002-item' src='/static/index/section2-002.jpg'></img>
+        </div>
+        <div class='section-002-picture-003'>
+          <img class='section-002-picture-003-item' src='/static/index/section2-003.jpg'></img>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class='section-003'>
+
+  </section>
+
+  <section class='section-004'>
+
   </section>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
