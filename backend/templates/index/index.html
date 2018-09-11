@@ -3,18 +3,18 @@
 <head>
   <title>아메카지 브랜드 MOAA(모아) 공식몰 입니다</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 </head>
 
 <style>
-html {
+html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-body {
+p {
   margin: 0;
   padding: 0;
 }
@@ -224,11 +224,100 @@ aside {
 }
 
 .section-003 {
-  border: solid 1px red;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.section-003-container {
+  width: 280px;
+  display: inline-block;
+  margin-bottom: 100px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.section-003-wrap{
+  position: relative;
+}
+
+.section-003-img {
+  width: 280px;
+  height: 420px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.section-003-img-over{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 80%;
+  background-color: #265110;
+  color: #ffffff;
+}
+
+.section-003-img:hover {
+  opacity: 0.8;
+}
+
+.section-003-title{
+  font-size: 85%;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.section-003-discount{
+  font-size: 90%;
+  color: #265110;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.section-003-present{
+  font-size: 90%;
+  text-decoration: line-through;
+  font-weight: bold;
+  display: inline-block;
 }
 
 .section-004 {
   border: solid 1px green;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.section-title-line {
+  width: 10%;
+  display: inline-block;
+  margin-bottom: 30px;
+  border: solid 0.5px rgb(62, 89, 57);
+}
+
+.section-title-en {
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 3px;
+  letter-spacing: 2px;
+}
+
+.section-title-jp {
+  font-size: 80%;
+  color: #aaaaaa;
+  margin-bottom: 30px;
 }
 
 @media only screen and (max-width: 870px) {
@@ -365,11 +454,28 @@ aside {
     </div>
   </section>
 
-  <div class='section-between'></div>
-
+  <section class='section-title'>
+    <div class='section-title-line'></div>
+    <p class='section-title-en'>WEEKLY BEST ITEM</p>
+    <p class='section-title-jp'>毎週 ベストアイテム</p>
+  </section>
 
   <section class='section-003'>
+    % for n in range(0,8):
+    <div class='section-003-container'>
 
+      <div class='section-003-wrap'>
+        <img class='section-003-img' src='/static/index/box${n}.jpg'></img>
+        <div class='section-003-img-over'>SALE</div>
+      </div>
+
+      <div class='section-003-title'>(20%) 18Fall_아키히카리 팬츠 셋업 (BLACK)</div>
+      <div>
+        <div class='section-003-discount'>123,200원</div>
+        <div class='section-003-present'>154,000원</div>
+      </div>
+    </div>
+    % endfor:
   </section>
 
   <section class='section-004'>
