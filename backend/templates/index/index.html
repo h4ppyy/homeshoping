@@ -4,18 +4,18 @@
   <title>아메카지 브랜드 MOAA(모아) 공식몰 입니다</title>
   <link rel="shortcut icon" type="image/png" href="/static/index/favicons.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+JP|Roboto" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
 </head>
 
 <style>
-html {
+html, body {
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu', sans-serif;
+  font-family: 'Roboto', sans-serif;
 }
 
-body {
+p {
   margin: 0;
   padding: 0;
 }
@@ -28,6 +28,7 @@ header {
   left:0;
   width: 100%;
   background: rgba(255, 255, 255, 0.9);
+  z-index: 999;
 }
 
 .header-logo-img {
@@ -102,7 +103,6 @@ nav {
 .dim-dark {
   display: none;
   position: fixed;
-  z-index: 1;
   top: 0;
   left: 0;
   width: 100%;
@@ -114,7 +114,6 @@ aside {
   height: 100%;
   width: 0%;
   position: fixed;
-  z-index: 2;
   top: 0;
   left: 0;
   background-color: #ffffff;
@@ -189,6 +188,208 @@ aside {
   color: #ffffff;
 }
 
+.section-between {
+  margin-top: 40px;
+}
+
+.section-002 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.section-002-container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  display: flex;
+}
+
+.section-002-picture-001 {
+  flex: 2;
+  padding-right: 10px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+.section-002-picture-002 {
+  padding-bottom: 5px;
+}
+
+.section-002-picture-003 {
+}
+
+.section-002-picture-merge{
+  flex: 1;
+}
+
+.section-002-picture-001-item {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 8px 10px 0px
+}
+
+.section-002-picture-002-item {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.section-002-picture-003-item {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.section-002-picture-001-item:hover{
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 8px 10px 0px
+}
+
+.section-002-picture-002-item:hover{
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px 0px
+}
+
+.section-002-picture-003-item:hover{
+  box-shadow: rgba(0, 0, 0, 0.5) 0px 8px 10px 0px
+}
+
+.section-003 {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  text-align: center;
+}
+
+.section-003-container {
+  width: 280px;
+  display: inline-block;
+  margin-bottom: 100px;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+
+.section-003-wrap{
+  position: relative;
+}
+
+.section-003-img {
+  width: 280px;
+  height: 420px;
+  margin-left: 5px;
+  margin-right: 5px;
+  transition: 0.2s;
+  z-index: 1;
+}
+
+.section-003-img-over{
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: -5px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 80%;
+  background-color: #265110;
+  color: #ffffff;
+}
+
+.section-003-img:hover {
+  opacity: 0.8;
+}
+
+.section-003-title{
+  font-size: 85%;
+  margin-top: 10px;
+  margin-bottom: 3px;
+}
+
+.section-003-discount{
+  font-size: 90%;
+  color: #265110;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.section-003-present{
+  font-size: 90%;
+  text-decoration: line-through;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.section-003-more-btn{
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: center;
+  border: solid 2px #3E5939;
+  color: #3E5939;
+  width: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 90%;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-top: -30px;
+}
+
+.section-003-more-btn:hover{
+  color: #ffffff;
+  background-color: #3E5939;
+}
+
+.section-004 {
+  border: solid 1px red;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  text-align: center;
+  height: 500px;
+}
+
+.section-title {
+  text-align: center;
+  margin-top: 70px;
+  margin-bottom: 50px;
+}
+
+.section-title-line {
+  width: 10%;
+  display: inline-block;
+  margin-bottom: 30px;
+  border: solid 0.5px rgb(62, 89, 57);
+}
+
+.section-title-en {
+  font-size: 120%;
+  font-weight: bold;
+  margin-bottom: 3px;
+  letter-spacing: 2px;
+}
+
+.section-title-en-001{
+  font-size: 90%;
+  font-weight: bold;
+  margin-bottom: 3px;
+  letter-spacing: 2px;
+}
+
+.section-title-jp {
+  font-size: 80%;
+  color: #aaaaaa;
+  margin-bottom: 30px;
+}
+
+.section-005{
+  margin-top: 80px;
+  background-color: rgb(255, 252, 247); opacity: 1;
+  height: 500px;
+}
+
 @media only screen and (max-width: 870px) {
   .nav-left-menu-container {
     display: none;
@@ -211,6 +412,29 @@ aside {
   }
   .header-hamberger {
     display: block;
+  }
+  .section-002-container {
+    display: unset;
+  }
+  .section-002-picture-001 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  .section-002-picture-002 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+
+  .section-002-picture-003 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 10px;
+  }
+  .section-002-picture-001-item {
+    box-shadow: none;
   }
 }
 </style>
@@ -289,33 +513,77 @@ aside {
 
   <div class='header-section-between'></div>
 
-  <section>
+  <section class='section-001'>
     <img class='section-main-banner'src='/static/index/main-banner.jpg'></img>
   </section>
 
-  <section>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
-    <h3>A collection of textile samples lay spread out on the table.</h3>
+  <div class='section-between'></div>
+
+  <section class='section-002'>
+    <div class='section-002-container'>
+      <div class='section-002-picture-001'>
+        <img class='section-002-picture-001-item' src='/static/index/section2-001.jpg'></img>
+      </div>
+      <div class='section-002-picture-merge'>
+        <div class='section-002-picture-002'>
+          <img class='section-002-picture-002-item' src='/static/index/section2-002.jpg'></img>
+        </div>
+        <div class='section-002-picture-003'>
+          <img class='section-002-picture-003-item' src='/static/index/section2-003.jpg'></img>
+        </div>
+      </div>
+    </div>
   </section>
+
+  <section class='section-title'>
+    <div class='section-title-line'></div>
+    <p class='section-title-en'>WEEKLY BEST ITEM</p>
+    <p class='section-title-jp'>毎週 ベストアイテム</p>
+  </section>
+
+  <section class='section-003'>
+    % for n in range(0,8):
+    <div class='section-003-container'>
+
+      <div class='section-003-wrap'>
+        <img class='section-003-img' src='/static/index/box${n}.jpg'></img>
+        <div class='section-003-img-over'>SALE</div>
+      </div>
+
+      <div class='section-003-title'>(20%) 18Fall_아키히카리 팬츠 셋업 (BLACK)</div>
+      <div>
+        <div class='section-003-discount'>123,200원</div>
+        <div class='section-003-present'>154,000원</div>
+      </div>
+    </div>
+    % endfor:
+
+    <div class='section-003-more-btn'>더 많은 상품 보기</div>
+  </section>
+
+  <section class='section-title'>
+    <div class='section-title-line'></div>
+    <p class='section-title-en'>INSTAGRAM</p>
+    <p class='section-title-jp'>インスタグラム</p>
+  </section>
+
+  <section class='section-004'>
+
+  </section>
+
+  <section class='section-title'>
+    <div class='section-title-line'></div>
+    <p class='section-title-en-001'>더 많은 사진을 보고싶으신가요?</p>
+    <p class='section-title-jp'>もっと多くの写真が見たいですか？</p>
+  </section>
+
+  <div class='section-003-more-btn'>@moaa_official</div>
+
+  <section class='section-005'>
+
+  </section>
+
+
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script>
