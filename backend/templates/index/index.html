@@ -2,6 +2,7 @@
 
 <head>
   <title>아메카지 브랜드 MOAA(모아) 공식몰 입니다</title>
+  <link rel="shortcut icon" type="image/png" href="/static/index/favicons.png"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
@@ -123,9 +124,19 @@ aside {
 }
 
 .aside-container {
-  padding-top: 30px;
+  padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
+}
+
+.aside-cancel-container {
+  text-align: right;
+  font-size: 200%;
+  margin-right: 10px;
+}
+
+.aside-cancel-icon {
+  cursor: pointer;
 }
 
 .aside-logo-img {
@@ -146,6 +157,10 @@ aside {
   padding: 3px;
 }
 
+.aside-search-input:focus {
+  outline: none;
+}
+
 .aside-menu-item {
   color: #444444;
   margin-bottom: 30px;
@@ -156,6 +171,22 @@ aside {
   font-size: 130%;
   color: #111111;
   margin-left: 10px;
+}
+
+.aside-login-btn {
+  margin-top: 50px;
+  background-color: #3E5939;
+  color: #ffffff;
+  border: solid 1px #3E5939;
+  padding: 10px;
+  text-align: center;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.aside-login-btn:hover{
+  background-color: #243121;
+  color: #ffffff;
 }
 
 @media only screen and (max-width: 870px) {
@@ -191,6 +222,11 @@ aside {
 
     <aside>
       <div class='aside-container'>
+
+        <div class='aside-cancel-container'>
+          <i class="fas fa-times aside-cancel-icon" onclick="handleClickDim()"></i>
+        </div>
+
         <img class='aside-logo-img' src='/static/index/main-logo.png'></img>
 
         <div class='aside-search-box'>
@@ -209,7 +245,13 @@ aside {
           <i class="fab fa-instagram aside-menu-icon"></i>
           <i class="fab fa-blogger-b aside-menu-icon"></i>
         </div>
+
+
+        <div class='aside-login-btn'>LOGIN</div>
       </div>
+
+
+
     </aside>
 
     <div class='header-hamberger'>
